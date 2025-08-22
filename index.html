@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L.Krishnamoorthy & Co., Chartered Accountants</title>
+  <meta name="description" content="L.Krishnamoorthy & Co., Chartered Accountants — Audit, Tax, GST, Accounting, Incorporation, Advisory in Chennai, India." />
+  <meta name="theme-color" content="#0b5" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="L.Krishnamoorthy & Co., Chartered Accountants" />
+  <meta property="og:description" content="Trusted CA firm for Audit, Tax, GST, Accounting, Company Incorporation, and Advisory." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <style>
+    :root {
+      --bg: #0b0d10;
+      --card: #10151b;
+      --muted: #9fb2c7;
+      --text: #e8f0f7;
+      --brand: #16c47f;
+      --brand-2: #2ed3aa;
+      --ring: rgba(46, 211, 170, .35);
+      --shadow: 0 6px 30px rgba(0,0,0,.25);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif; background: linear-gradient(180deg, #07090c, #0a1118); color: var(--text); }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Layout */
+    .container { width: min(1120px, 92%); margin-inline: auto; }
+    header { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(180%) blur(8px); background: rgba(10, 17, 24, .6); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: .9rem 0; }
+    .brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; letter-spacing: .3px; }
+    .brand .logo { width: 36px; height: 36px; border-radius: 10px; background: radial-gradient(120% 120% at 10% 10%, var(--brand-2), var(--brand) 60%, #0b5 90%); box-shadow: inset 0 0 12px rgba(255,255,255,.12), 0 8px 24px rgba(22,196,127,.35); }
+    .nav a { opacity: .9; }
+    .nav-links { display: flex; gap: 1.2rem; align-items: center; }
+    .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .7rem 1rem; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); box-shadow: var(--shadow); transition: transform .08s ease, border-color .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-1px); border-color: var(--ring); box-shadow: 0 10px 28px rgba(46, 211, 170, .18); }
+    .btn.primary { background: linear-gradient(180deg, var(--brand-2), var(--brand)); color: #07120f; border: none; font-weight: 700; }
+
+    /* Mobile nav */
+    .menu { display: none; }
+    .hamburger { display: none; width: 40px; height: 40px; align-items: center; justify-content: center; border-radius: 10px; border: 1px solid rgba(255,255,255,.12); background: rgba(255,255,255,.04); }
+    .hamburger span { width: 20px; height: 2px; background: var(--text); position: relative; display: block; }
+    .hamburger span::before, .hamburger span::after { content: ""; position: absolute; left: 0; right: 0; height: 2px; background: var(--text); }
+    .hamburger span::before { top: -6px; }
+    .hamburger span::after { top: 6px; }
+
+    /* Hero */
+    .hero { padding: 96px 0 64px; position: relative; overflow: hidden; }
+    .hero .bg-blur { position: absolute; inset: -25%; background: radial-gradient(40% 30% at 20% 10%, rgba(46,211,170,.25), transparent 60%), radial-gradient(40% 30% at 80% 10%, rgba(22,196,127,.18), transparent 60%); filter: blur(60px); opacity: .9; pointer-events: none; }
+    .hero h1 { font-size: clamp(1.8rem, 3vw + 1rem, 3rem); line-height: 1.15; margin: 0 0 .75rem; }
+    .hero p { color: var(--muted); font-size: clamp(1rem, .6vw + .8rem, 1.125rem); max-width: 64ch; }
+    .hero-cta { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.2rem; }
+
+    /* Cards */
+    .grid { display: grid; gap: 1rem; }
+    .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 1.25rem; }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1rem; box-shadow: var(--shadow); }
+    .card h3 { margin: .2rem 0 .4rem; font-size: 1.05rem; }
+    .card p { color: var(--muted); font-size: .98rem; margin: 0; }
+
+    /* Section */
+    section { padding: 56px 0; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .8rem; }
+    .section-head h2 { font-size: clamp(1.25rem, .8vw + 1rem, 1.8rem); margin: 0; }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    /* Services */
+    .services { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .service { background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1rem; display: grid; gap: .6rem; box-shadow: var(--shadow); }
+    .service .icon { width: 40px; height: 40px; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(180deg, rgba(46,211,170,.2), rgba(46,211,170,.04)); border: 1px solid rgba(46,211,170,.3); }
+    .service ul { margin: 0; padding-left: 1.1rem; color: var(--muted); }
+
+    /* About */
+    .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 1rem; }
+    .about .box { background: var(--card); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 1rem; box-shadow: var(--shadow); }
+
+    /* Contact */
+    .contact-wrap { display: grid; grid-template-columns: 1fr .9fr; gap: 1rem; }
+    form { display: grid; gap: .8rem; }
+    label { font-size: .95rem; opacity: .9; }
+    input, textarea { width: 100%; padding: .8rem; border-radius: 12px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.04); color: var(--text); outline: none; }
+    input:focus, textarea:focus { border-color: var(--ring); box-shadow: 0 0 0 4px rgba(46,211,170,.12); }
+    textarea { min-height: 120px; resize: vertical; }
+
+    /* Footer */
+    footer { border-top: 1px solid rgba(255,255,255,.08); padding: 24px 0 48px; color: var(--muted); }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; }
+
+    /* Badges */
+    .badge { display: inline-flex; align-items: center; gap: .4rem; padding: .35rem .6rem; border-radius: 999px; font-size: .85rem; border: 1px solid rgba(46,211,170,.35); background: rgba(46,211,170,.06); color: #bff3e3; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .cards, .services { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .about, .contact-wrap { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .hamburger { display: inline-flex; }
+      .menu { display: grid; gap: .6rem; padding: .6rem; }
+      .cards, .services { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="logo" aria-hidden="true"></span>
+        <span>L.Krishnamoorthy & Co.</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#contact">Get a Consultation</a>
+      </nav>
+      <button class="hamburger" aria-label="Open menu" id="menuBtn"><span></span></button>
+    </div>
+    <div id="mobileMenu" class="container menu" hidden>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get a Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="bg-blur" aria-hidden="true"></div>
+    <div class="container">
+      <span class="badge">Chartered Accountants • Chennai</span>
+      <h1>Trusted Partner for <span style="background:linear-gradient(90deg,var(--brand-2),var(--brand));-webkit-background-clip:text;background-clip:text;color:transparent">Audit, Tax & Advisory</span></h1>
+      <p>We help businesses, startups, and professionals stay compliant and grow confidently with end‑to‑end Accounting, Taxation, Audit, and Advisory solutions.</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="#contact">Book Free Consult</a>
+        <a class="btn" href="#services">Explore Services</a>
+      </div>
+
+      <div class="grid cards" aria-label="Highlights">
+        <div class="card"><h3>GST & Income Tax</h3><p>Registrations, returns, assessments, and strategic tax planning.</p></div>
+        <div class="card"><h3>Audit & Assurance</h3><p>Statutory, internal, tax and stock audits with clear, actionable reporting.</p></div>
+        <div class="card"><h3>Business Setup</h3><p>Incorporation, ROC compliances, and CFO‑style advisory for growth.</p></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Services</h2>
+        <p>Comprehensive CA services tailored to your stage and scale.</p>
+      </div>
+      <div class="grid services">
+        <article class="service">
+          <div class="icon" aria-hidden="true">💼</div>
+          <h3>Audit & Assurance</h3>
+          <p>Independent assurance that builds stakeholder confidence.</p>
+          <ul>
+            <li>Statutory & Tax Audit</li>
+            <li>Internal / Process Audit</li>
+            <li>Stock & Due Diligence</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="icon" aria-hidden="true">🧾</div>
+          <h3>Taxation (Direct & Indirect)</h3>
+          <p>End‑to‑end compliance with proactive tax planning.</p>
+          <ul>
+            <li>Income Tax & TDS</li>
+            <li>GST Registration & Returns</li>
+            <li>Scrutiny, Appeals & Assessments</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="icon" aria-hidden="true">📊</div>
+          <h3>Accounting & Reporting</h3>
+          <p>Accurate books and timely MIS for better decisions.</p>
+          <ul>
+            <li>Bookkeeping & Finalisation</li>
+            <li>Payroll & PF/ESI</li>
+            <li>Periodic MIS & Forecasts</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="icon" aria-hidden="true">🏢</div>
+          <h3>Business Setup & ROC</h3>
+          <p>Launch fast with compliant structures and documentation.</p>
+          <ul>
+            <li>Company / LLP Incorporation</li>
+            <li>ROC Filings & XBRL</li>
+            <li>Licenses & Registrations</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="icon" aria-hidden="true">🧠</div>
+          <h3>Advisory & Virtual CFO</h3>
+          <p>Strategic finance partnering for scale‑up and control.</p>
+          <ul>
+            <li>Budgeting & Forecasting</li>
+            <li>Costing & Controls</li>
+            <li>Valuation & Transaction Support</li>
+          </ul>
+        </article>
+        <article class="service">
+          <div class="icon" aria-hidden="true">🌐</div>
+          <h3>NRI & International</h3>
+          <p>Cross‑border tax & compliance handled end‑to‑end.</p>
+          <ul>
+            <li>NRI Tax Returns</li>
+            <li>DTAA & Remittances (15CA/CB)</li>
+            <li>FEMA Advisory</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container about">
+      <div class="box">
+        <h2>About Us</h2>
+        <p>At <strong>L.Krishnamoorthy & Co.</strong>, we combine rigorous technical expertise with practical business sense. Our focus is to simplify compliance, strengthen controls, and unlock growth for MSMEs, startups, and professionals.</p>
+        <div class="grid cards" style="margin-top:.6rem; grid-template-columns: repeat(3, minmax(0, 1fr));">
+          <div class="card"><h3>Client‑First</h3><p>Clear communication, timelines, and transparent pricing.</p></div>
+         
