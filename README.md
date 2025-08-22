@@ -1,0 +1,1 @@
+I am a Chartered Accountant, qualified in May-2013 and have a ten years of experience in audit and accounts field. I am a freelancer, consultant who is ready to sign accounts and provide assurance services for all assessees
